@@ -29,47 +29,48 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Column(
+                        modifier = Modifier.padding(8.dp),
                         verticalArrangement = Arrangement.SpaceAround,
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Text("----- Flow Row -----")
                         FlowRowExample(
                             listOf(
-                                "Rise and Shine",
-                                "Winter of the South",
-                                "Kind of",
-                                "I dunno what to say",
-                                "Hell on earth",
-                                "Rise and Shine",
-                                "Winter of the South",
-                                "Kind of",
-                                "I dunno what to say",
-                                "Hell on earth"
+                                "Deep into the ocean",
+                                "Wrong Turn",
+                                "Army of dead",
+                                "Now you see me",
+                                "Avengers",
+                                "Iron Man",
+                                "Deep water",
+                                "Captain america: and the winter soldier",
+                                "Journey to the center of the earth",
+                                "Rampage"
                             )
                         )
 
                         Text("----- Flow Column -----")
                         FlowColumnExample(
                             listOf(
+                                "Spider-man",
+                                "Middle of the east",
+                                "Bodyguard",
+                                "Saw",
+                                "Sonic",
+                                "Last day on earth",
                                 "Rise and Shine",
-                                "Winter of the South",
-                                "Kind of",
-                                "I dunno what to say",
-                                "Hell on earth",
-                                "Rise and Shine",
-                                "Winter of the South",
-                                "Kind of",
-                                "I dunno what to say",
-                                "Hell on earth", "Rise and Shine",
-                                "Winter of the South",
-                                "Kind of",
-                                "I dunno what to say",
-                                "Hell on earth",
-                                "Rise and Shine",
-                                "Winter of the South",
-                                "Kind of",
-                                "I dunno what to say",
-                                "Hell on earth"
+                                "On and off",
+                                "Moon fall",
+                                "Interstellar",
+                                "Superman",
+                                "Dawn",
+                                "Don't say no",
+                                "Keep Quite",
+                                "harry Porter",
+                                "Sniper",
+                                "Solar eclipse",
+                                "Spectre",
+                                "Twilight"
                             )
                         )
                     }
