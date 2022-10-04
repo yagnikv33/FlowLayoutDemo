@@ -23,12 +23,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             FlowLayoutDemoTheme {
-                // A surface container using the 'background' color from the theme
+
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Column(verticalArrangement = Arrangement.SpaceAround, horizontalAlignment = Alignment.CenterHorizontally) {
+                    Column(
+                        verticalArrangement = Arrangement.SpaceAround,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
                         Text("----- Flow Row -----")
                         FlowRowExample(
                             listOf(
@@ -57,7 +60,7 @@ class MainActivity : ComponentActivity() {
                                 "Winter of the South",
                                 "Kind of",
                                 "I dunno what to say",
-                                "Hell on earth","Rise and Shine",
+                                "Hell on earth", "Rise and Shine",
                                 "Winter of the South",
                                 "Kind of",
                                 "I dunno what to say",
@@ -70,7 +73,6 @@ class MainActivity : ComponentActivity() {
                             )
                         )
                     }
-
                 }
             }
         }
@@ -83,7 +85,6 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun FlowRowExample(list: List<String>) {
-
     FlowRow {
         for (albumName in list) {
             Chip(modifier = Modifier.padding(end = 4.dp), onClick = {}) {
@@ -98,7 +99,7 @@ fun FlowRowExample(list: List<String>) {
  * */
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun FlowColumnExample(list:List<String>){
+fun FlowColumnExample(list: List<String>) {
     FlowColumn {
         for (albumName in list) {
             Chip(modifier = Modifier.padding(end = 4.dp), onClick = {}) {
@@ -112,6 +113,50 @@ fun FlowColumnExample(list:List<String>){
 @Composable
 fun DefaultPreview() {
     FlowLayoutDemoTheme {
-        FlowRowExample(listOf("Rise and Shine", "Winter of the South", "Kind of", "I dunno what to say", "Hell on earth"))
+        Column(
+            verticalArrangement = Arrangement.SpaceAround,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text("----- Flow Row -----")
+            FlowRowExample(
+                listOf(
+                    "Rise and Shine",
+                    "Winter of the South",
+                    "Kind of",
+                    "I dunno what to say",
+                    "Hell on earth",
+                    "Rise and Shine",
+                    "Winter of the South",
+                    "Kind of",
+                    "I dunno what to say",
+                    "Hell on earth"
+                )
+            )
+
+            Text("----- Flow Column -----")
+            FlowColumnExample(
+                listOf(
+                    "Rise and Shine",
+                    "Winter of the South",
+                    "Kind of",
+                    "I dunno what to say",
+                    "Hell on earth",
+                    "Rise and Shine",
+                    "Winter of the South",
+                    "Kind of",
+                    "I dunno what to say",
+                    "Hell on earth", "Rise and Shine",
+                    "Winter of the South",
+                    "Kind of",
+                    "I dunno what to say",
+                    "Hell on earth",
+                    "Rise and Shine",
+                    "Winter of the South",
+                    "Kind of",
+                    "I dunno what to say",
+                    "Hell on earth"
+                )
+            )
+        }
     }
 }
