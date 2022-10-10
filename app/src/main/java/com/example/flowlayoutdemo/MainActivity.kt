@@ -30,8 +30,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column(
                         modifier = Modifier.padding(8.dp),
-                        verticalArrangement = Arrangement.SpaceAround,
-                        horizontalAlignment = Alignment.CenterHorizontally
+
                     ) {
                         Text("----- Flow Row -----")
                         FlowRowExample(
